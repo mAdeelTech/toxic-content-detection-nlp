@@ -1,0 +1,8 @@
+# Python 3.11+
+# Core packages required by NLP Assignment 1
+pandas
+nltk
+spacy
+datasets
+matplotlib
+jupyter
