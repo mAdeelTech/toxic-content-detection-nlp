@@ -21,7 +21,7 @@ TEXT_COLUMN = "user_input"
 LABEL_COLUMN = "toxicity"
 OUTPUT_DIR = Path("data/processed")
 
-TOKEN_PATTERN = re.compile(r"\\w+(?:['’]\\w+)*|[^\\w\\s]", flags=re.UNICODE)
+TOKEN_PATTERN = re.compile(r"\w+(?:['’]\w+)*|[^\w\s]", flags=re.UNICODE)
 LEMMATIZER = WordNetLemmatizer()
 
 
@@ -56,8 +56,8 @@ def clean_text(text):
         return ""
 
     text = unicodedata.normalize("NFC", str(text))
-    text = re.sub(r"https?://\\S+|www\\.\\S+", " URL ", text, flags=re.IGNORECASE)
-    text = re.sub(r"(?<!\\w)@\\w+", " USER ", text)
+    text = re.sub(r"https?://\S+|www\.\S+", " URL ", text, flags=re.IGNORECASE)
+    text = re.sub(r"(?<!\w)@\w+", " USER ", text)
 
     tokens = TOKEN_PATTERN.findall(text)
     if not tokens:
@@ -67,16 +67,16 @@ def clean_text(text):
     cleaned_tokens = []
     for token, tag in tagged_tokens:
         wn_pos = penn_to_wordnet(tag)
-        if wn_pos and re.search(r"\\w", token, flags=re.UNICODE):
+        if wn_pos and re.search(r"\w", token, flags=re.UNICODE):
             lemma = LEMMATIZER.lemmatize(token.lower(), pos=wn_pos)
             token = restore_case(token, lemma)
         cleaned_tokens.append(token)
 
     cleaned = " ".join(cleaned_tokens)
-    cleaned = re.sub(r"\\s+([,.;:!?%])", r"\\1", cleaned)
-    cleaned = re.sub(r"([([{])\\s+", r"\\1", cleaned)
-    cleaned = re.sub(r"\\s+([)\\]}])", r"\\1", cleaned)
-    return re.sub(r"\\s+", " ", cleaned).strip()
+    cleaned = re.sub(r"\s+([,.;:!?%])", r"\1", cleaned)
+    cleaned = re.sub(r"([([{])\s+", r"\1", cleaned)
+    cleaned = re.sub(r"\s+([)\]}])", r"\1", cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
 
 
 def main():
