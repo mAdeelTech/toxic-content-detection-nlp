@@ -25,3 +25,7 @@ The script downloads `lmsys/toxic-chat` configuration `toxicchat0124` and writes
 - `data/processed/toxicchat_test_cleaned.csv`
 
 Do not commit raw dataset files. The generated CSVs are local outputs unless the team agrees on a separate storage policy. See [Hadia's cleaning report section](reports/hadia_cleaning_section.md) for method choices and the contribution statement.
+
+## Assignment 2 evaluation and packaging
+
+See [Parts C and D](ASSIGNMENT2_CD.md) for setup, model handoff, and the shared vectorization interface. [Measured results](reports/assignment2_cd_findings.md) include all three model probes and document-vector checks.

@@ -1,0 +1,817 @@
+{
+  "training_rows": 5082,
+  "actual_test_rows": [
+    0,
+    1,
+    2
+  ],
+  "representations": {
+    "bow": {
+      "dimension": 13237,
+      "training_rows": 5082,
+      "zero_percent": 99.8528952555888,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            13237
+          ],
+          "nonzero": 16,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            13237
+          ],
+          "nonzero": 6,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            13237
+          ],
+          "nonzero": 4,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 0
+      }
+    },
+    "tfidf": {
+      "dimension": 13237,
+      "training_rows": 5082,
+      "zero_percent": 99.8528952555888,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            13237
+          ],
+          "nonzero": 16,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            13237
+          ],
+          "nonzero": 6,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            13237
+          ],
+          "nonzero": 4,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 0
+      }
+    },
+    "bigram": {
+      "dimension": 84059,
+      "training_rows": 5082,
+      "zero_percent": 99.94725505270587,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            84059
+          ],
+          "nonzero": 22,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            84059
+          ],
+          "nonzero": 6,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            84059
+          ],
+          "nonzero": 6,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 0
+      }
+    },
+    "trigram": {
+      "dimension": 185597,
+      "training_rows": 5082,
+      "zero_percent": 99.96260861730866,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            185597
+          ],
+          "nonzero": 23,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            185597
+          ],
+          "nonzero": 6,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            185597
+          ],
+          "nonzero": 7,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 0
+      }
+    },
+    "cbow": {
+      "dimension": 100,
+      "trained_vocabulary_size": 6375,
+      "queries": {
+        "hate": [
+          [
+            "therefore",
+            0.8820119500160217
+          ],
+          [
+            "ace",
+            0.8757851123809814
+          ],
+          [
+            "difficult",
+            0.8688464760780334
+          ],
+          [
+            "generic",
+            0.8648422360420227
+          ],
+          [
+            "sometimes",
+            0.8644154667854309
+          ]
+        ],
+        "abuse": [
+          [
+            "outer",
+            0.9520328640937805
+          ],
+          [
+            "motherhood",
+            0.9421576857566833
+          ],
+          [
+            "ornate",
+            0.9406306147575378
+          ],
+          [
+            "arnold",
+            0.9400120377540588
+          ],
+          [
+            "rectify",
+            0.9398464560508728
+          ]
+        ],
+        "stupid": [
+          [
+            "hornet",
+            0.9469553232192993
+          ],
+          [
+            "russia",
+            0.9444772601127625
+          ],
+          [
+            "karl",
+            0.9410783052444458
+          ],
+          [
+            "scary",
+            0.9394049644470215
+          ],
+          [
+            "korean",
+            0.9390469193458557
+          ]
+        ],
+        "help": [
+          [
+            "teach",
+            0.7337353229522705
+          ],
+          [
+            "recommend",
+            0.729103684425354
+          ],
+          [
+            "assist",
+            0.7084975838661194
+          ],
+          [
+            "chat",
+            0.6892092227935791
+          ],
+          [
+            "build",
+            0.6663102507591248
+          ]
+        ],
+        "write": [
+          [
+            "create",
+            0.7915126085281372
+          ],
+          [
+            "compose",
+            0.7706415057182312
+          ],
+          [
+            "generate",
+            0.7247035503387451
+          ],
+          [
+            "teller",
+            0.7071740031242371
+          ],
+          [
+            "short",
+            0.6930058598518372
+          ]
+        ]
+      },
+      "missing_queries": [],
+      "cosine": {
+        "expected_related": [
+          {
+            "words": [
+              "hate",
+              "dislike"
+            ],
+            "cosine": 0.7404717803001404,
+            "missing": []
+          },
+          {
+            "words": [
+              "abuse",
+              "offensive"
+            ],
+            "cosine": 0.34896591305732727,
+            "missing": []
+          }
+        ],
+        "expected_unrelated": [
+          {
+            "words": [
+              "hate",
+              "recipe"
+            ],
+            "cosine": 0.5233351588249207,
+            "missing": []
+          },
+          {
+            "words": [
+              "stupid",
+              "python"
+            ],
+            "cosine": 0.2861069440841675,
+            "missing": []
+          }
+        ]
+      },
+      "analogy": {
+        "operation": "woman - man + king",
+        "expected": "queen",
+        "missing_inputs": [],
+        "results": [
+          [
+            "people",
+            0.7566606998443604
+          ],
+          [
+            "great",
+            0.7407236695289612
+          ],
+          [
+            "life",
+            0.6926751136779785
+          ],
+          [
+            "likely",
+            0.6831979751586914
+          ],
+          [
+            "weight",
+            0.6823898553848267
+          ]
+        ],
+        "top1_correct": false,
+        "expected_in_vocab": true
+      },
+      "zero_percent": 0.05903187721369996,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 0
+      }
+    },
+    "skipgram": {
+      "dimension": 100,
+      "trained_vocabulary_size": 6375,
+      "queries": {
+        "hate": [
+          [
+            "racism",
+            0.7858507633209229
+          ],
+          [
+            "claim",
+            0.7408734560012817
+          ],
+          [
+            "airbus",
+            0.7355290055274963
+          ],
+          [
+            "restrict",
+            0.7284234762191772
+          ],
+          [
+            "humour",
+            0.7187366485595703
+          ]
+        ],
+        "abuse": [
+          [
+            "chastity",
+            0.8253614902496338
+          ],
+          [
+            "dieback",
+            0.8207409977912903
+          ],
+          [
+            "designer",
+            0.8201330900192261
+          ],
+          [
+            "peaceful",
+            0.8196016550064087
+          ],
+          [
+            "bath",
+            0.8182709217071533
+          ]
+        ],
+        "stupid": [
+          [
+            "jew",
+            0.8309916257858276
+          ],
+          [
+            "biden",
+            0.8210018277168274
+          ],
+          [
+            "gollum",
+            0.8184574246406555
+          ],
+          [
+            "brandon",
+            0.8067082762718201
+          ],
+          [
+            "winter",
+            0.8033273220062256
+          ]
+        ],
+        "help": [
+          [
+            "assist",
+            0.6025397777557373
+          ],
+          [
+            "modular",
+            0.5923377871513367
+          ],
+          [
+            "creator",
+            0.5856145024299622
+          ],
+          [
+            "mental",
+            0.5637530088424683
+          ],
+          [
+            "subtopics",
+            0.5568903684616089
+          ]
+        ],
+        "write": [
+          [
+            "compose",
+            0.6742910742759705
+          ],
+          [
+            "programmer",
+            0.6417160630226135
+          ],
+          [
+            "wirte",
+            0.6403506994247437
+          ],
+          [
+            "chessboard",
+            0.6340253949165344
+          ],
+          [
+            "generate",
+            0.631640613079071
+          ]
+        ]
+      },
+      "missing_queries": [],
+      "cosine": {
+        "expected_related": [
+          {
+            "words": [
+              "hate",
+              "dislike"
+            ],
+            "cosine": 0.5271011590957642,
+            "missing": []
+          },
+          {
+            "words": [
+              "abuse",
+              "offensive"
+            ],
+            "cosine": 0.37891706824302673,
+            "missing": []
+          }
+        ],
+        "expected_unrelated": [
+          {
+            "words": [
+              "hate",
+              "recipe"
+            ],
+            "cosine": 0.23061589896678925,
+            "missing": []
+          },
+          {
+            "words": [
+              "stupid",
+              "python"
+            ],
+            "cosine": 0.2618851661682129,
+            "missing": []
+          }
+        ]
+      },
+      "analogy": {
+        "operation": "woman - man + king",
+        "expected": "queen",
+        "missing_inputs": [],
+        "results": [
+          [
+            "castle",
+            0.5279717445373535
+          ],
+          [
+            "respectful",
+            0.5225157141685486
+          ],
+          [
+            "across",
+            0.5192603468894958
+          ],
+          [
+            "gravity",
+            0.5185998678207397
+          ],
+          [
+            "driving",
+            0.5131474137306213
+          ]
+        ],
+        "top1_correct": false,
+        "expected_in_vocab": true
+      },
+      "zero_percent": 0.05903187721369996,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 0
+      }
+    },
+    "fasttext": {
+      "dimension": 100,
+      "trained_vocabulary_size": 6375,
+      "queries": {
+        "hate": [
+          [
+            "kate",
+            0.8505905270576477
+          ],
+          [
+            "affiliate",
+            0.8265361189842224
+          ],
+          [
+            "debate",
+            0.795537531375885
+          ],
+          [
+            "deviate",
+            0.7880710959434509
+          ],
+          [
+            "gate",
+            0.7867385745048523
+          ]
+        ],
+        "abuse": [
+          [
+            "fuse",
+            0.7966063022613525
+          ],
+          [
+            "horse",
+            0.7863864898681641
+          ],
+          [
+            "glucose",
+            0.7836339473724365
+          ],
+          [
+            "abu",
+            0.7558579444885254
+          ],
+          [
+            "absurd",
+            0.7522030472755432
+          ]
+        ],
+        "stupid": [
+          [
+            "stuff",
+            0.7908746600151062
+          ],
+          [
+            "hurry",
+            0.7849379777908325
+          ],
+          [
+            "stalk",
+            0.7816810607910156
+          ],
+          [
+            "mermaid",
+            0.7789064645767212
+          ],
+          [
+            "giggle",
+            0.7774373292922974
+          ]
+        ],
+        "help": [
+          [
+            "helo",
+            0.7567912340164185
+          ],
+          [
+            "helium",
+            0.7277417182922363
+          ],
+          [
+            "helpful",
+            0.6875336766242981
+          ],
+          [
+            "helm",
+            0.6637278199195862
+          ],
+          [
+            "hell",
+            0.6221871376037598
+          ]
+        ],
+        "write": [
+          [
+            "overwrite",
+            0.8072797656059265
+          ],
+          [
+            "writer",
+            0.7832226753234863
+          ],
+          [
+            "orite",
+            0.7445648312568665
+          ],
+          [
+            "wirte",
+            0.7209777235984802
+          ],
+          [
+            "rewrite",
+            0.7033221125602722
+          ]
+        ]
+      },
+      "missing_queries": [],
+      "cosine": {
+        "expected_related": [
+          {
+            "words": [
+              "hate",
+              "dislike"
+            ],
+            "cosine": 0.3701559901237488,
+            "missing": []
+          },
+          {
+            "words": [
+              "abuse",
+              "offensive"
+            ],
+            "cosine": 0.5266856551170349,
+            "missing": []
+          }
+        ],
+        "expected_unrelated": [
+          {
+            "words": [
+              "hate",
+              "recipe"
+            ],
+            "cosine": 0.25833117961883545,
+            "missing": []
+          },
+          {
+            "words": [
+              "stupid",
+              "python"
+            ],
+            "cosine": 0.38769403100013733,
+            "missing": []
+          }
+        ]
+      },
+      "analogy": {
+        "operation": "woman - man + king",
+        "expected": "queen",
+        "missing_inputs": [],
+        "results": [
+          [
+            "working",
+            0.826034426689148
+          ],
+          [
+            "hiking",
+            0.8240001797676086
+          ],
+          [
+            "smoking",
+            0.8140349388122559
+          ],
+          [
+            "living",
+            0.786836564540863
+          ],
+          [
+            "thinking",
+            0.7544378638267517
+          ]
+        ],
+        "top1_correct": false,
+        "expected_in_vocab": true
+      },
+      "zero_percent": 0.01967729240456295,
+      "sample_checks": [
+        {
+          "row": 0,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 1,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        },
+        {
+          "row": 2,
+          "shape": [
+            1,
+            100
+          ],
+          "nonzero": 100,
+          "matches_saved_cleaned_row": true
+        }
+      ],
+      "oov_check": {
+        "token": "unseenwordxyz",
+        "nonzero": 100
+      }
+    }
+  },
+  "missing_artifacts": {}
+}
