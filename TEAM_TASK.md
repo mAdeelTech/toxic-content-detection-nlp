@@ -1,19 +1,18 @@
-# Hadia — Text Cleaning Task
+# Shazaib — Tokenization and Regex Task
 
-Branch: `feature/text-cleaning`
-Notebook: `notebooks/03_text_cleaning.ipynb`
+Branch: `feature/tokenization-regex`
+Notebook: `notebooks/02_tokenization_regex.ipynb`
 
 ## Required work
-- Unicode normalization and justification.
-- Case handling decision and justification.
-- Noise removal strategy.
-- Stopword decision (protect negation such as not/no/never).
-- Demonstrate stemming and lemmatization.
-- Build a reusable cleaning function and show before/after examples.
+- Demonstrate two tokenization methods (NLTK and spaCy are suggested).
+- Implement at least three useful regex patterns.
+- Show examples and outputs.
+- Explain two real challenges found in ToxicChat prompts.
+- Preserve meaning-bearing punctuation, negation, and toxicity-related terms; do not over-clean.
 
 ## Dataset
 `load_dataset('lmsys/toxic-chat', 'toxicchat0124')`
 Input: `user_input`; target: `toxicity`.
 
 ## Submission
-Complete the notebook, run all cells, explain decisions in Markdown, and commit your work on this branch. Open a pull request into `main`. Keep original text unchanged in a separate column. Do not upload raw dataset files.
+Complete the notebook, run all cells, explain decisions in Markdown, and commit your work on this branch. Open a pull request into `main`. Do not upload raw dataset files.

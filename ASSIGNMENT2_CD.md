@@ -5,12 +5,23 @@
 Use Python 3.11 or 3.12. From the root of the evaluation branch, install
 `requirements.txt` in a virtual environment. The version pins match the
 serialization and evaluation run. Use the exact Assignment 1 CSVs from the
-evaluation branch's base commit `cb75760`.
+evaluation branch's base commit `cb75760`. The training CSV is already in the repository. Generate the held-out CSV locally and keep it out of the commit because it includes original prompts. The commands below generate the CSVs in a temporary folder and copy only the held-out CSV back.
 
 ```powershell
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -c "from scripts.clean_toxicchat import ensure_nltk_resources; ensure_nltk_resources()"
+$project = (Get-Location).Path
+$cleaningRun = Join-Path ([System.IO.Path]::GetTempPath()) ("toxicchat-" + [guid]::NewGuid())
+New-Item -ItemType Directory -Path $cleaningRun | Out-Null
+Push-Location $cleaningRun
+try {
+    & "$project\.venv\Scripts\python.exe" "$project\scripts\clean_toxicchat.py"
+    if ($LASTEXITCODE -ne 0) { throw "Cleaning failed" }
+    Copy-Item .\data\processed\toxicchat_test_cleaned.csv "$project\data\processed"
+} finally {
+    Pop-Location
+}
 .\.venv\Scripts\python.exe assignment2_save_vectorizers.py
 .\.venv\Scripts\python.exe assignment2_probe.py --count-only
 ```

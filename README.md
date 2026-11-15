@@ -4,7 +4,7 @@ NLP Project — Toxic Content Detection using LMSYS ToxicChat
 
 ## Text cleaning contribution (Hadia)
 
-The reproducible preprocessing notebook is [`notebooks/03_text_cleaning.ipynb`](notebooks/03_text_cleaning.ipynb). A standalone script is available at [`scripts/clean_toxicchat.py`](scripts/clean_toxicchat.py).
+The reproducible preprocessing script is [`scripts/clean_toxicchat.py`](scripts/clean_toxicchat.py).
 
 ### Run the cleaning pipeline
 
@@ -24,7 +24,7 @@ The script downloads `lmsys/toxic-chat` configuration `toxicchat0124` and writes
 - `data/processed/toxicchat_train_cleaned.csv`
 - `data/processed/toxicchat_test_cleaned.csv`
 
-Do not commit raw dataset files. The generated CSVs are local outputs unless the team agrees on a separate storage policy. See [Hadia's cleaning report section](reports/hadia_cleaning_section.md) for method choices and the contribution statement.
+Do not commit raw dataset files. The generated CSVs are local outputs unless the team agrees on a separate storage policy.
 
 ## Assignment 2 evaluation and packaging
 
