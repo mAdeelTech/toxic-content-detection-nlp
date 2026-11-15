@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Generated Assignment 2 artifacts
+/artifacts/assignment2/
+/models/
+
+# Local held-out export contains original prompts
+/data/processed/toxicchat_test_cleaned.csv
